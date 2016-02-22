@@ -4,6 +4,8 @@ Date: 2/8/2016
 Assignment: In class Assignment to add Data insert into the table creation statements.
 Class: AD350 
 made plural by Kellan :)
+
+Test
 */
 
 DROP DATABASE IF EXISTS prism;
