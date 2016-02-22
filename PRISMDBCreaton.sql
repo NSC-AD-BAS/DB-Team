@@ -13,16 +13,16 @@ USE prism;
 CREATE TABLE Organizations
 (
 	OrganizationId			INT				PRIMARY KEY 		AUTO_INCREMENT,
-    OrganizationName		VARCHAR(100)	UNIQUE				NOT NULL,
-    YearlyReveune			INT				NULL,
-    NumOfEmployees			INT				NULL,
-	URL						VARCHAR(250)	NULL,
-    StreetAddressLineOne	VARCHAR(250)	NULL,
-    StreetAddressLineTwo	VARCHAR(250)	NULL,
-    City					VARCHAR(250)	NULL,
-    State					VARCHAR(250)	NULL,
-    Statement				VARCHAR(250)	NULL,
-	Description 			TEXT			NOT NULL
+	OrganizationName		VARCHAR(100)			UNIQUE			NOT NULL,
+	YearlyReveune			INT				NULL,
+	NumOfEmployees			INT				NULL,
+	URL				VARCHAR(250)			NULL,
+    	StreetAddressLineOne		VARCHAR(250)			NULL,
+    	StreetAddressLineTwo		VARCHAR(250)			NULL,
+    	City				VARCHAR(250)			NULL,
+    	State				VARCHAR(250)			NULL,
+    	Statement			VARCHAR(250)			NULL,
+	Description 			TEXT				NOT NULL
 );
 
 INSERT INTO Organizations (OrganizationId,  OrganizationName, YearlyReveune, NumOfEmployees, 
