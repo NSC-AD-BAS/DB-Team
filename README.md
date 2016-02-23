@@ -1,5 +1,2 @@
-# How do I get the Database Up and Running?
-
-1) Download & Run "Database Creation - No Data.sql"
-
-2) Download & Run "Database.Creation.-.Data.Insertion.sql"
+# Queston: How do I get the Database Up and Running?
+Answer: Donwload and run "dbCreationScript.sql" in MySQL Workbench. If it runs without errors, your good.
