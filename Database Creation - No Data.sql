@@ -75,8 +75,6 @@ CREATE TABLE Users
 		FOREIGN KEY (TypeId)
         REFERENCES UserTypes(TypeId)
 );
-INSERT INTO Users
-(UserId, FullName, ContactInfo, UserName, Password, TypeId)
 
 
 CREATE TABLE Students
