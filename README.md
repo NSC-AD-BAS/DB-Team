@@ -1,4 +1,3 @@
-# DB-Team
-MySQL Related Material shall be found here.
-
-MySQL scripts will be posted here for other team members to use to test implementations. Updated as needed.
+# How do I get the Database Up and Running?
+1) Download & Run "Database Creation - No Data.sql"
+2) Download & Run "Database.Creation.-.Data.Insertion.sql"
