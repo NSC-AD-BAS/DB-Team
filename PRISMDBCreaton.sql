@@ -1,11 +1,5 @@
 /*
-Author: Casey Doulgas Riggin
-Date: 2/8/2016
-Assignment: In class Assignment to add Data insert into the table creation statements.
-Class: AD350 
-made plural by Kellan :)
-
-Test
+This script will clear and re-create the database with dummy data.
 */
 
 DROP DATABASE IF EXISTS prism;
@@ -31,8 +25,8 @@ INSERT INTO Organizations (OrganizationId,  OrganizationName, YearlyReveune, Num
 	URL, StreetAddressLineOne, StreetAddressLineTwo, City, State, Statement, Description)
 VALUES 
 (1, 'Casey\'s Card Store', 12500, 5, 'www.befantastic.com', '123 Fancy Lane', null, 'Seattle', 'Washington', NULL, 'We sell cards, and hire interns - because they work for very little money, and we like money.' ),
-(2, 'Anne Guitar Shop', 9000000, 1, 'www.belikeanne.com', null, null, null, null, null, 'Play guiars like me, and be rich'),
-(3, 'Grants Puppy Mill', 1000, 50, null, null, null, 'Phenoix', 'Arizona', null, 'Play guiars like me, and be rich'),
+(2, 'Anne Guitar Shop', 9000000, 1, 'www.belikeanne.com', null, null, null, null, null, 'Play guitars like me, and be rich'),
+(3, 'Grants Puppy Mill', 1000, 50, null, null, null, 'Phenoix', 'Arizona', null, 'Play guitars like me, and be rich'),
 (4, 'Chris\' Customer PC', 1337000, 10, 'www.pcsbetterthandell.com', null, null, 'Seattle', 'Washington', null, 'We\'re better than dell and we know it.');
 
 CREATE TABLE Organization_Contacts
@@ -40,9 +34,9 @@ CREATE TABLE Organization_Contacts
 	ContactId				INT				PRIMARY KEY			AUTO_INCREMENT,
     OrganizationId			INT				NOT NULL,
     ContactName				VARCHAR(100)	NOT NULL,
-    OfficeNumber			VARCHAR(10),
-    OfficeExention			VARCHAR(10),
-	CellNumber				VARCHAR(10),
+    OfficeNumber			VARCHAR(12),
+    OfficeExtension			VARCHAR(10),
+	CellNumber				VARCHAR(12),
     EmailAddress			VARCHAR(100),
     OfficeHours				VARCHAR(10), 
 	CONSTRAINT Organization_Contact_fk_OrganizationId
@@ -50,13 +44,13 @@ CREATE TABLE Organization_Contacts
         REFERENCES Organizations(OrganizationId)
 );
 INSERT INTO Organization_Contacts (ContactId, OrganizationId, ContactName, OfficeNumber,
-    OfficeExention, CellNumber, EmailAddress, OfficeHours) 
+    OfficeExtension, CellNumber, EmailAddress, OfficeHours) 
 VALUES 
-(1, 1, 'Casey Riggin', '2061114521', null, null, 'casey.riggin@gmail.com', '5AM-10PM'),
-(2, 1, 'Douglas Riggin', '2061114511', null, null, 'caseys.dad@gmail.com', '5AM-9PM'),
-(3, 2, 'Anne LastName', null, null, '5421124424',null, '5AM-9PM'),
-(4, 3, 'Grant', null, null, '5412311514', null, '1PM-5PM'),
-(5, 4, 'Chris', '4125841235', null, '5412321514', 'chrispuppies@gmail.com', '1PM-5PM');
+(1, 1, 'Casey Riggin', '206-111-4521', null, null, 'casey.riggin@gmail.com', '5AM-10PM'),
+(2, 1, 'Douglas Riggin', '206-111-4511', null, null, 'caseys.dad@gmail.com', '5AM-9PM'),
+(3, 2, 'Anne LastName', null, null, '542-112-4424',null, '5AM-9PM'),
+(4, 3, 'Grant', null, null, '541-231-1514', null, '1PM-5PM'),
+(5, 4, 'Chris', '412-584-1235', null, '541-232-1514', 'chrispuppies@gmail.com', '1PM-5PM');
 
 
 CREATE TABLE Internships
