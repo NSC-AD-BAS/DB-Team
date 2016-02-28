@@ -3,170 +3,149 @@ USE prism;
 -- View Creation
 -- 
 
--- List to populate internship table view
 CREATE OR REPLACE VIEW internship_list AS
-(
-	SELECT 
-		`i`.`IntershipId`,
-        `o`.`organizationId`,
-		`i`.`PositionTitle` AS `Position Title`,
-        `o`.`OrganizationName` AS `Organization`,
-        `i`.`DatePosted` AS `Date Posted`,
-        `o`.`City`, 
-        `o`.`State`,
-        `i`.`StartDate` AS `Start Date`,
-        `i`.`EndDate` AS `End Date`
+    (SELECT 
+        i.InternshipId,
+        o.organizationId,
+        i.PositionTitle AS `Position Title`,
+        o.OrganizationName AS `Organization`,
+        i.DatePosted AS `Date Posted`,
+        o.City,
+        o.State,
+        i.StartDate AS `Start Date`,
+        i.EndDate AS `End Date`
     FROM
-        `internships` `i`
-        JOIN `organizations` `o` 
-			ON `o`.`OrganizationId` = `i`.`OrganizationId`
-);
+        internships i
+            JOIN
+        organizations o ON o.OrganizationId = i.OrganizationId);
 
 -- View to be used with stored procedure for single record detail views. 
 CREATE OR REPLACE VIEW internship_detail AS
-(
-	SELECT 
-		`i`.`IntershipId`,
-		`i`.`PositionTitle` AS `Position Title`,
-        `o`.`OrganizationName` AS `Organization`,
-        `i`.`DatePosted` AS `Date Posted`,
-        `i`.`StartDate` AS `Start Date`,
-        `i`.`EndDate` AS `End Date`,
-		`o`.`StreetAddressLineOne` AS `Address 1`,
-		`o`.`StreetAddressLineTwo` AS `Address 2`,
-		`o`.`City`, 
-		`o`.`State`
-			AS `Location`,
-		`i`.`description` AS `Job Description`,
-		`i`.`LastUpdated` AS `Last Update`
+    (SELECT 
+        i.InternshipId,
+        i.PositionTitle AS `Position Title`,
+        o.OrganizationName AS `Organization`,
+        i.DatePosted AS `Date Posted`,
+        i.StartDate AS `Start Date`,
+        i.EndDate AS `End Date`,
+        o.StreetAddressLineOne AS `Address 1`,
+        o.StreetAddressLineTwo AS `Address 2`,
+        o.City,
+        o.State,
+        i.description AS `Job Description`,
+        i.LastUpdated AS `Last Update`
     FROM
-        `internships` `i`
-        JOIN `organizations` `o` 
-			ON `o`.`OrganizationId` = `i`.`OrganizationId`
-);
+        internships i
+            JOIN
+        organizations o ON o.OrganizationId = i.OrganizationId);
 
-CREATE OR REPLACE VIEW org_list AS 
-(
-	SELECT 
-		o.OrganizationName AS `Organization Name`,
-		`o`.`City`, 
-        `o`.`State`,
-        COUNT(i.intershipId) AS `Number of Positions`
-        
-	FROM organizations o
-        JOIN internships i 
-			ON o.OrganizationId = i.OrganizationId
-        GROUP BY o.OrganizationId
-	
-);
+CREATE OR REPLACE VIEW org_list AS
+    (SELECT 
+        o.OrganizationName AS `Organization Name`,
+        o.City,
+        o.State,
+        COUNT(i.InternshipId) AS `Number of Positions`
+    FROM
+        organizations o
+            JOIN
+        internships i ON o.OrganizationId = i.OrganizationId
+    GROUP BY o.OrganizationId);
 
-CREATE OR REPLACE VIEW org_detail AS 
-(
-	SELECT 
-		o.OrganizationId,
-		o.OrganizationName AS `Organization`,
+CREATE OR REPLACE VIEW org_detail AS
+    (SELECT 
+        o.OrganizationId,
+        o.OrganizationName AS `Organization`,
         o.URL,
-		`o`.`StreetAddressLineOne` AS `Address 1`,
-		`o`.`StreetAddressLineTwo` AS `Address 2`,
-		`o`.`City`, 
-		`o`.`State`,
-        `o`.`NumOfEmployees` AS `Number of Employees`,
-		`o`.`YearlyReveune` AS `Yearly Revenue`,
-        `o`.`Statement`,
-        `o`.`Description`
-        
-		FROM organizations o
-			JOIN internships i 
-				ON o.OrganizationId = i.OrganizationId
-);
+        o.StreetAddressLineOne AS `Address 1`,
+        o.StreetAddressLineTwo AS `Address 2`,
+        o.City,
+        o.State,
+        o.NumOfEmployees AS `Number of Employees`,
+        o.YearlyRevenue AS `Yearly Revenue`,
+        o.Statement,
+        o.Description
+    FROM
+        organizations o
+            JOIN
+        internships i ON o.OrganizationId = i.OrganizationId);
 
-CREATE OR REPLACE VIEW student_list AS 
-(
-	SELECT 
-		u.FullName AS `Student Name`,
+CREATE OR REPLACE VIEW student_list AS
+    (SELECT 
+        u.FullName AS `Student Name`,
         s.StudentId AS `SID`,
         s.Cohort,
         s.ProgramStatus AS `Program Status`,
-		i.positionTitle AS `Internship`,
+        i.positionTitle AS `Internship`,
         un.Note_Text AS `Notes`
-        
-        
-    FROM students s
-		JOIN users u 
-			ON u.userId = s.userId
-		JOIN internships i 
-			ON i.intershipId = s.intershipId
-		JOIN user_notes un 
-			ON un.userId = s.userId
-		
-);
+    FROM
+        students s
+            JOIN
+        users u ON u.userId = s.userId
+            JOIN
+        internships i ON i.InternshipId = s.InternshipId
+            JOIN
+        user_notes un ON un.userId = s.userId);
 
-CREATE OR REPLACE VIEW student_detail AS 
-(
-	SELECT 
-		u.FullName AS `Student Name`,
+CREATE OR REPLACE VIEW student_detail AS
+    (SELECT 
+        u.FullName AS `Student Name`,
         s.StudentId AS `SID`,
         s.Cohort,
         s.ProgramStatus AS `Program Status`,
-		i.positionTitle AS `Internship`,
+        i.positionTitle AS `Internship`,
         u.contactInfo AS `Contact`,
         s.StreetAddressLineOne AS `Address 1`,
         s.StreetAddressLineTwo AS `Address 2`,
         s.City,
         s.State,
         un.Note_Text AS `Notes`
-        
-        
-    FROM students s
-		JOIN users u 
-			ON u.userId = s.userId
-		JOIN internships i 
-			ON i.intershipId = s.intershipId
-		JOIN user_notes un 
-			ON un.userId = s.userId
-		
-);
+    FROM
+        students s
+            JOIN
+        users u ON u.userId = s.userId
+            JOIN
+        internships i ON i.InternshipId = s.InternshipId
+            JOIN
+        user_notes un ON un.userId = s.userId);
 
-CREATE OR REPLACE VIEW user_list AS 
-(
-	SELECT 
-		u.UserId AS `User ID`, 
-		u.FullName AS `User Name`,
+CREATE OR REPLACE VIEW user_list AS
+    (SELECT 
+        u.UserId AS `User ID`,
+        u.FullName AS `User Name`,
         u.ContactInfo AS `Contact`,
         t.TypeName AS `User Type`,
         n.Note_Text AS `Notes`
-        
-	
-    FROM users u
-		JOIN user_types t
-			ON t.TypeId = u.TypeId AND t.TypeName != "Student"
-		JOIN user_notes n
-			ON n.UserId = u.UserId
-);
+    FROM
+        users u
+            JOIN
+        user_types t ON t.TypeId = u.TypeId
+            AND t.TypeName != 'Student'
+            JOIN
+        user_notes n ON n.UserId = u.UserId);
 
-CREATE OR REPLACE VIEW user_detail AS 
-(
-	SELECT * FROM user_list
-);
+CREATE OR REPLACE VIEW user_detail AS
+    (SELECT 
+        *
+    FROM
+        user_list);
 
-CREATE OR REPLACE VIEW change_list AS 
-(
-	SELECT 
-		c.Change_LogId,
+CREATE OR REPLACE VIEW change_list AS
+    (SELECT 
+        c.Change_LogId,
         c.LogTime,
         c.UserId,
         u.FullName AS `User Name`,
         c.Message
-        
-	FROM change_log c
-		JOIN users u 
-			ON u.UserId = c.UserId
-);
+    FROM
+        change_log c
+            JOIN
+        users u ON u.UserId = c.UserId);
 
-CREATE OR REPLACE VIEW change_detail AS 
-(
-	SELECT * FROM change_list
-);
+CREATE OR REPLACE VIEW change_detail AS
+    (SELECT 
+        *
+    FROM
+        change_list);
 
 DROP PROCEDURE IF EXISTS `internship_detail_single`;
 DROP PROCEDURE IF EXISTS `org_detail_single`;
@@ -179,7 +158,7 @@ DELIMITER //
 CREATE PROCEDURE `internship_detail_single` (IN internship_ID INT)
 	BEGIN
 		SELECT * FROM internship_detail i
-		WHERE i.IntershipId = internship_id;
+		WHERE i.InternshipId = internship_id;
 	END //
     
 CREATE PROCEDURE `org_detail_single` (IN org_ID INT)
