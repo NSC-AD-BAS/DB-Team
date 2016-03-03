@@ -1,0 +1,1604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Devart (www.devart.com), Data-Generator document file -->
+<!-- Modifying this generated file will probably render it invalid -->
+<DataGenDocument xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="4.0">
+  <Settings>
+    <Provider>59f90733-4d68-4fdf-82a7-f0fcbf5460aa</Provider>
+    <ConnectionString>User Id=root;Host=localhost;Character Set=utf8</ConnectionString>
+    <CategoryId>00000000-0000-0000-0000-000000000000</CategoryId>
+    <AllowNulls>true</AllowNulls>
+    <IncludeNullsPercent>10</IncludeNullsPercent>
+    <AllowEmptyString>true</AllowEmptyString>
+    <IncludeEmptyStringPercent>10</IncludeEmptyStringPercent>
+    <DatabaseName>prism</DatabaseName>
+    <RowsToGenerate>1000</RowsToGenerate>
+    <GenerateUniqueValues>false</GenerateUniqueValues>
+    <TruncateTables>true</TruncateTables>
+    <DistributionMode>Sequential</DistributionMode>
+    <Seed>1</Seed>
+    <LastSeedValue>0</LastSeedValue>
+  </Settings>
+  <Tables>
+    <Table Name="organizations">
+      <Checked>true</Checked>
+      <Settings>
+        <RowsToGenerate>1000</RowsToGenerate>
+        <Truncate>true</Truncate>
+      </Settings>
+      <Columns>
+        <Column Name="OrganizationId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>7</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9999999</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="OrganizationName">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>7</SeedValue>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>(((American|Australian|Canadian|Pacific|Federal|Global|Domestic|First|General|(West((ern)?|( Coast)))|North|East|South|Flexible|City|WorldWide|Home|Advanced|Beyond|Future|National|International|(Uni(on|ted))|Special|Professional|Smart|Creative) ))(Systems|((2|3|4|5)G )Wireless|(([A-Z]-)?Mobile)|Telecom(munications)?|(([2-7])D )Electronic|Entertainment|(Financial( Experts)?)|Services|Devices|(Logi(cs|stic))|(High-)?Technologies|(Renewable|Natural Gas|Fossil Fuel|Wave|Thermal|Solar|Wind|Green|Nuclear) (Energy|Resources|Power)|((Oil|Electricity)( &amp; Gas)?)|Investment|Insurance|Broadcasting|Trust|Tire &amp; Rubber|Engineering|Protection|Software|Cars( Battery)?|Equipment|Semiconductor|Business|Mining|Heating|Partners|Data|Computers|Security|Petroleum|Instruments|Laboratories|(Lasers &amp; )?Optics|Travel|(Space )?(Research|Explore)|Management|Consulting|Media|Telemetrics|Development|Materials|(F|G)oods|Transport(ation)?|Industry|Health( Care)?|Automotive|Products|Delivery) (((Inc|Co(rp)?).)|(Group|Corporation))</Expression>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Company</GeneratorName>
+          <GeneratorDescription>First Tire &amp; Rubber Inc., Smart Systems Corp., Flexible Insurance Group, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Length>100</Length>
+        </Column>
+        <Column Name="YearlyReveune">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>7</SeedValue>
+            <MinValue>1012</MinValue>
+            <MaxValue>300000</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue>NULL</DefaultValue>
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>int</GeneratorName>
+          <GeneratorDescription>fill with 32-bit signed integer values</GeneratorDescription>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="NumOfEmployees">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>8</SeedValue>
+            <MinValue>10</MinValue>
+            <MaxValue>5000</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue>NULL</DefaultValue>
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>int</GeneratorName>
+          <GeneratorDescription>fill with 32-bit signed integer values</GeneratorDescription>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="URL">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>7</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>((http(s)?)://)(www.)?(((((al|an|ar|as|at|ea|ed|en|er|es|ha|he|hi|in|is|it|le|me|nd|ne|ng|nt|on|or|th|re|ou|to|ve|te|st|ti|se|wa)|(all|and|are|but|ent|era|ere|eve|for|had|hat|hen|hin|his|ing|ion|ith|not|ome|oul|our|sho|ted|ter|tha|thi|tio|uld|ver|was|wit|the|her|you)){2,4}|((all|and|are|but|ent|era|ere|eve|for|had|hat|hen|hin|his|ing|ion|ith|not|ome|oul|our|sho|ted|ter|tha|thi|tio|uld|ver|was|wit|the|her|you)|(al|an|ar|as|at|ea|ed|en|er|es|ha|he|hi|in|is|it|le|me|nd|ne|ng|nt|on|or|th|re|ou|to|ve|te|st|ti|se|wa)){2,4}).((au|ae|ar|at|be|br|ca|ch|cn|cy|cz|de|dk|eg|es|fi|fr|ge|gr|hk|hu|il|it|jp|kr|lu|lv|mx|nl|no|nz|se|tr|tw|ua|uk|us|za)|(biz|net|org|com)))/((((((al|an|ar|as|at|ea|ed|en|er|es|ha|he|hi|in|is|it|le|me|nd|ne|ng|nt|on|or|th|re|ou|to|ve|te|st|ti|se|wa)|(all|and|are|but|ent|era|ere|eve|for|had|hat|hen|hin|his|ing|ion|ith|not|ome|oul|our|sho|ted|ter|tha|thi|tio|uld|ver|was|wit|the|her|you)){1,3}|((all|and|are|but|ent|era|ere|eve|for|had|hat|hen|hin|his|ing|ion|ith|not|ome|oul|our|sho|ted|ter|tha|thi|tio|uld|ver|was|wit|the|her|you)|(al|an|ar|as|at|ea|ed|en|er|es|ha|he|hi|in|is|it|le|me|nd|ne|ng|nt|on|or|th|re|ou|to|ve|te|st|ti|se|wa)){1,3}))/){1,3})(((al|an|ar|as|at|ea|ed|en|er|es|ha|he|hi|in|is|it|le|me|nd|ne|ng|nt|on|or|th|re|ou|to|ve|te|st|ti|se|wa)|(all|and|are|but|ent|era|ere|eve|for|had|hat|hen|hin|his|ing|ion|ith|not|ome|oul|our|sho|ted|ter|tha|thi|tio|uld|ver|was|wit|the|her|you)){2,4}|((all|and|are|but|ent|era|ere|eve|for|had|hat|hen|hin|his|ing|ion|ith|not|ome|oul|our|sho|ted|ter|tha|thi|tio|uld|ver|was|wit|the|her|you)|(al|an|ar|as|at|ea|ed|en|er|es|ha|he|hi|in|is|it|le|me|nd|ne|ng|nt|on|or|th|re|ou|to|ve|te|st|ti|se|wa)){2,4}).((php(\?t=\D\d{1,3}(&amp;p=\D\d{1,3})?)?)|(asp(x)?(\?id=\D\d{1,2})?)|htm(l)?))</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>URL (web)</GeneratorName>
+          <GeneratorDescription>http://alandth.es/atometer/tedhen.php?t=5715, http://enhi.fr/our/hadnd.html, https://thiar.biz/antote/insho.asp, ...</GeneratorDescription>
+          <GeneratorCategory>IT</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="StreetAddressLineOne">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>7</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>(([1-9]\d{1,2})|([1-3]\d{3})) (((New|Old|Hidden|West|South|East|North|White|Red|E|(S)?W|NW|S(E)?|N(E)?) )?((((Ski|Chapel|Hunting|Fox|Rose|Riddle|Rock|Prospect|Sharp) Hill)|Front|Hope|Mount|Church|Social|Riverside|Highland|(Wood(land|bridge|hurst|side|row|fort|cock))|((Deep|Iron|Rush|Edge|Park|Hazel|Bur|Glen|Rock|Quail|Stone|Flint|Button|Beach|Ash|Brent)wood)|Lake|(Cedar|Pine) Tree|Oak|((Water|Meadow|Farm|River|Bay)view)|Town|Market|Mountain|Monument))|((1st|2nd|3rd|[4-9]\d?th))) (St(reet)?|Ave(nue)?|Dr(ive)?|R(oa)?d|Ct|C(our)?t|Ln|Lane|Blvd|Cir(cle)?|Hwy|Highway|Loop|Way|Pkwy|Parkway)</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>US Address Line 1</GeneratorName>
+          <GeneratorDescription>3581 South Ironwood Lane, 24 NW Lake Blvd, 1063 97th Street, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="StreetAddressLineTwo">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>8</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>((1st|2nd|3rd|[4-9]\d?th) (Floor|FL))|((Apartment|APT) \D\d{,2})|((Suite|STE) \D\d{,3})|(((Nipper|Diamond|Standard|Keith|Superior|Enquirer|Bartlett|Plaza|Equitable|MidAmerican|Penobscot|Guardian|Fisher|Buhl|First Security|257 Towers|Kearns|Judge) (Building|Bldg)))</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>US Address Line 2</GeneratorName>
+          <GeneratorDescription>Standard Building, Suite 14, 2nd Floor, APT 783, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="City">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="TextFileGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>7</SeedValue>
+            <IsLoop>true</IsLoop>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <FileName>USCities.txt</FileName>
+            <TrimLeft>false</TrimLeft>
+            <TrimRight>false</TrimRight>
+            <CodePage>-1</CodePage>
+          </GeneratorOptions>
+          <GeneratorType>MySqlTextFileGenerator</GeneratorType>
+          <GeneratorName>US City</GeneratorName>
+          <GeneratorDescription>Washington, Las Vegas, Malibu, New York, Detroit, Los Angeles, Redmond, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="State">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>7</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>($"USStateCodes.csv[1]")</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>US State</GeneratorName>
+          <GeneratorDescription>New York, Indiana, Ohio, Alaska, Texas, Virginia, Kansas, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="Statement">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="LoremIpsumGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>8</SeedValue>
+            <MinLength>1</MinLength>
+            <MaxLength>199</MaxLength>
+            <MaxAllowedLength>250</MaxAllowedLength>
+            <MinWordsInSentence>3</MinWordsInSentence>
+            <MaxWordsInSentence>7</MaxWordsInSentence>
+            <MinSentences>1</MinSentences>
+            <MaxSentences>10</MaxSentences>
+            <MinParagraphs>1</MinParagraphs>
+            <MaxParagraphs>1</MaxParagraphs>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <PunctuationSigns>,.!?...;</PunctuationSigns>
+            <StartParagraphWithIndent>false</StartParagraphWithIndent>
+            <AddParagraphTags>false</AddParagraphTags>
+            <AddItalicTags>false</AddItalicTags>
+            <AddBoldTags>false</AddBoldTags>
+            <AddSingleLineBreakTags>false</AddSingleLineBreakTags>
+            <AddNewLines>false</AddNewLines>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>0</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlLoremIpsumGenerator</GeneratorType>
+          <GeneratorName>Product Description</GeneratorName>
+          <GeneratorDescription>Repellenadus at facilis. Aut id harum quae! Et qui ullam., ...</GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="Description">
+          <Checked>true</Checked>
+          <DataType>TEXT</DataType>
+          <GeneratorOptions xsi:type="LoremIpsumGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>7</SeedValue>
+            <MinLength>1</MinLength>
+            <MaxLength>9999</MaxLength>
+            <MaxAllowedLength>0</MaxAllowedLength>
+            <MinWordsInSentence>5</MinWordsInSentence>
+            <MaxWordsInSentence>15</MaxWordsInSentence>
+            <MinSentences>1</MinSentences>
+            <MaxSentences>20</MaxSentences>
+            <MinParagraphs>1</MinParagraphs>
+            <MaxParagraphs>3</MaxParagraphs>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <PunctuationSigns>,.!?...;</PunctuationSigns>
+            <StartParagraphWithIndent>false</StartParagraphWithIndent>
+            <AddParagraphTags>false</AddParagraphTags>
+            <AddItalicTags>false</AddItalicTags>
+            <AddBoldTags>false</AddBoldTags>
+            <AddSingleLineBreakTags>false</AddSingleLineBreakTags>
+            <AddNewLines>false</AddNewLines>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>0</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlLoremIpsumGenerator</GeneratorType>
+          <GeneratorName>Product Description</GeneratorName>
+          <GeneratorDescription>Repellenadus at facilis. Aut id harum quae! Et qui ullam., ...</GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="user_types">
+      <Checked>false</Checked>
+      <Settings>
+        <RowsToGenerate>1000</RowsToGenerate>
+        <Truncate>true</Truncate>
+      </Settings>
+      <Columns>
+        <Column Name="TypeId">
+          <Checked>false</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>50</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>18</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>3</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>int</GeneratorName>
+          <GeneratorDescription>fill with 32-bit signed integer values</GeneratorDescription>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="TypeName">
+          <Checked>false</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlVarcharGeneratorOptions">
+            <RowsCountToGenerate>50</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>18</SeedValue>
+            <MinStringAllowedLenght>1</MinStringAllowedLenght>
+            <MaxStringAllowedLenght>12</MaxStringAllowedLenght>
+            <MinStringLenght>1</MinStringLenght>
+            <MaxStringLenght>12</MaxStringLenght>
+            <StartChar>97</StartChar>
+            <EndChar>122</EndChar>
+            <CodePage>20127</CodePage>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlVarcharGenerator</GeneratorType>
+          <GeneratorName>string</GeneratorName>
+          <GeneratorDescription>fill with character string values</GeneratorDescription>
+          <Length>12</Length>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="internships">
+      <Checked>true</Checked>
+      <Settings>
+        <RowsToGenerate>1000</RowsToGenerate>
+        <Truncate>true</Truncate>
+      </Settings>
+      <Columns>
+        <Column Name="IntershipId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>2</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9999999</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="PositionTitle">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>2</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>($"JobTitles.csv[1]")</Expression>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Job Title</GeneratorName>
+          <GeneratorDescription>Product Manager, Support Engineer, Purchasing Agent, Accountant, QA Engineer, Business Analyst, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>100</Length>
+        </Column>
+        <Column Name="Description">
+          <Checked>true</Checked>
+          <DataType>TEXT</DataType>
+          <GeneratorOptions xsi:type="LoremIpsumGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>2</SeedValue>
+            <MinLength>1</MinLength>
+            <MaxLength>9999</MaxLength>
+            <MaxAllowedLength>0</MaxAllowedLength>
+            <MinWordsInSentence>5</MinWordsInSentence>
+            <MaxWordsInSentence>15</MaxWordsInSentence>
+            <MinSentences>1</MinSentences>
+            <MaxSentences>20</MaxSentences>
+            <MinParagraphs>1</MinParagraphs>
+            <MaxParagraphs>3</MaxParagraphs>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <PunctuationSigns>,.!?...;</PunctuationSigns>
+            <StartParagraphWithIndent>false</StartParagraphWithIndent>
+            <AddParagraphTags>false</AddParagraphTags>
+            <AddItalicTags>false</AddItalicTags>
+            <AddBoldTags>false</AddBoldTags>
+            <AddSingleLineBreakTags>false</AddSingleLineBreakTags>
+            <AddNewLines>false</AddNewLines>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>0</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlLoremIpsumGenerator</GeneratorType>
+          <GeneratorName>Product Description</GeneratorName>
+          <GeneratorDescription>Repellenadus at facilis. Aut id harum quae! Et qui ullam., ...</GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+        </Column>
+        <Column Name="OrganizationId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>2</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="LocationState">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>2</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>($"USStateCodes.csv[1]")</Expression>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>US State</GeneratorName>
+          <GeneratorDescription>New York, Indiana, Ohio, Alaska, Texas, Virginia, Kansas, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="LocationZip">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>2</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>\d{5}-\d{4}|\d{5}</Expression>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>US Post Code (ZIP)</GeneratorName>
+          <GeneratorDescription>48470, 90189, 10265, 55078, 22067, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>10</Length>
+        </Column>
+        <Column Name="DatePosted">
+          <Checked>true</Checked>
+          <DataType>DATE</DataType>
+          <GeneratorOptions xsi:type="DateGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>2</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <DateTimeRange>MinMaxDate</DateTimeRange>
+            <OffsetFromColumnMinDays>0</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>7</OffsetFromColumnMaxDays>
+            <OffsetFromColumnMinTime />
+            <OffsetFromColumnMaxTime />
+            <MinDate>2015-12-01T00:00:00-08:00</MinDate>
+            <MaxDate>2016-02-22T00:00:00-08:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+          </GeneratorOptions>
+          <GeneratorType>MySqlDateGenerator</GeneratorType>
+          <GeneratorName>date</GeneratorName>
+          <GeneratorDescription>fill with date values</GeneratorDescription>
+        </Column>
+        <Column Name="AppStartDate">
+          <Checked>true</Checked>
+          <DataType>DATE</DataType>
+          <GeneratorOptions xsi:type="DateGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>3</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <DateTimeRange>MinMaxDate</DateTimeRange>
+            <OffsetFromColumnMinDays>0</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>7</OffsetFromColumnMaxDays>
+            <OffsetFromColumnMinTime />
+            <OffsetFromColumnMaxTime />
+            <MinDate>2016-01-01T00:00:00-08:00</MinDate>
+            <MaxDate>2016-03-31T00:00:00-07:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+          </GeneratorOptions>
+          <GeneratorType>MySqlDateGenerator</GeneratorType>
+          <GeneratorName>date</GeneratorName>
+          <GeneratorDescription>fill with date values</GeneratorDescription>
+        </Column>
+        <Column Name="AppEndDate">
+          <Checked>true</Checked>
+          <DataType>DATE</DataType>
+          <GeneratorOptions xsi:type="DateGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>4</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <DateTimeRange>MinMaxDate</DateTimeRange>
+            <OffsetFromColumnMinDays>0</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>7</OffsetFromColumnMaxDays>
+            <OffsetFromColumnMinTime />
+            <OffsetFromColumnMaxTime />
+            <MinDate>2016-04-01T00:00:00-07:00</MinDate>
+            <MaxDate>2016-06-01T00:00:00-07:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+          </GeneratorOptions>
+          <GeneratorType>MySqlDateGenerator</GeneratorType>
+          <GeneratorName>date</GeneratorName>
+          <GeneratorDescription>fill with date values</GeneratorDescription>
+        </Column>
+        <Column Name="StartDate">
+          <Checked>true</Checked>
+          <DataType>DATE</DataType>
+          <GeneratorOptions xsi:type="DateGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>3</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <DateTimeRange>MinMaxDate</DateTimeRange>
+            <OffsetFromColumnMinDays>0</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>7</OffsetFromColumnMaxDays>
+            <OffsetFromColumnMinTime />
+            <OffsetFromColumnMaxTime />
+            <MinDate>2016-05-01T00:00:00-07:00</MinDate>
+            <MaxDate>2016-07-01T00:00:00-07:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+          </GeneratorOptions>
+          <GeneratorType>MySqlDateGenerator</GeneratorType>
+          <GeneratorName>date</GeneratorName>
+          <GeneratorDescription>fill with date values</GeneratorDescription>
+        </Column>
+        <Column Name="EndDate">
+          <Checked>true</Checked>
+          <DataType>DATE</DataType>
+          <GeneratorOptions xsi:type="DateGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>4</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <DateTimeRange>OffsetFromColumn</DateTimeRange>
+            <SelectedColumn>StartDate</SelectedColumn>
+            <OffsetFromColumnMinDays>29</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>100</OffsetFromColumnMaxDays>
+            <OffsetFromColumnMinTime />
+            <OffsetFromColumnMaxTime />
+            <MinDate>1970-01-01T00:00:00</MinDate>
+            <MaxDate>2016-02-22T00:00:00-08:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+          </GeneratorOptions>
+          <GeneratorType>MySqlDateGenerator</GeneratorType>
+          <GeneratorName>date</GeneratorName>
+          <GeneratorDescription>fill with date values</GeneratorDescription>
+        </Column>
+        <Column Name="SlotsAvailable">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>2</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>10</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>int</GeneratorName>
+          <GeneratorDescription>fill with 32-bit signed integer values</GeneratorDescription>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="LastUpdated">
+          <Checked>true</Checked>
+          <DataType>DATETIME</DataType>
+          <GeneratorOptions xsi:type="MySqlDateTimeGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>2</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <DateTimeRange>MinMaxDate</DateTimeRange>
+            <OffsetFromColumnMinDays>0</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>7</OffsetFromColumnMaxDays>
+            <OffsetFromColumnMinTime />
+            <OffsetFromColumnMaxTime />
+            <MinDate>2016-01-01T00:00:00-08:00</MinDate>
+            <MaxDate>2016-02-22T00:00:00-08:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+            <IsRandomizeTime>true</IsRandomizeTime>
+            <MaxTime>863990000000</MaxTime>
+            <MinTime>10000000</MinTime>
+          </GeneratorOptions>
+          <GeneratorType>MySqlDateTimeGenerator</GeneratorType>
+          <GeneratorName>datetime</GeneratorName>
+          <GeneratorDescription>fill with date and time with fractional seconds values</GeneratorDescription>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="organization_contacts">
+      <Checked>true</Checked>
+      <Settings>
+        <RowsToGenerate>3000</RowsToGenerate>
+        <Truncate>true</Truncate>
+      </Settings>
+      <Columns>
+        <Column Name="ContactId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>3000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>5</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9999999</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="OrganizationId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>5</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="ContactName">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>3000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>5</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>(($"FirstNamesMale.txt")|($"FirstNamesFemale.txt")) ($"LastNames.txt")</Expression>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Full Name</GeneratorName>
+          <GeneratorDescription>Malik Whitmore, Sherill Gaskin, Rigoberto Mundy, Joelle Childers, Vanna Doss, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>100</Length>
+        </Column>
+        <Column Name="OfficeNumber">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>3000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>5</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>\d{3}\-\d{3}\-\d{4}</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Phone Number (local)</GeneratorName>
+          <GeneratorDescription>352-5422, 114-6587, 025-9635, 267-4128, 725-5250, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>12</Length>
+        </Column>
+        <Column Name="OfficeExtension">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>3000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>5</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>\d{1,4}</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Phone Extension</GeneratorName>
+          <GeneratorDescription>2, 8, 1, 0, 6, 9, 4, 3, 5, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>10</Length>
+        </Column>
+        <Column Name="CellNumber">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>3000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>6</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>\d{3}\-\d{3}\-\d{4}</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Phone Number (local)</GeneratorName>
+          <GeneratorDescription>352-5422, 114-6587, 025-9635, 267-4128, 725-5250, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>12</Length>
+        </Column>
+        <Column Name="EmailAddress">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>3000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>5</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>(((((($"FirstNamesMale.txt")|($"FirstNamesFemale.txt"))[_.]?)?($"LastNames.txt"))|(($"LastNames.txt")\C?)|(((($"FirstNamesMale.txt")|($"FirstNamesFemale.txt"))[_.]?(\C[_.]?)?)?($"LastNames.txt")))(\D{,3})?|\c{4,8}(\d{1,4}|[_.]\c{4,10}))@(example$"7"|nowhere$"3").com</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Email</GeneratorName>
+          <GeneratorDescription>Danica.Foley@example.com, fstu@nowhere.com, CurtK_Burton@example.com, LaroseM696@nowhere.com, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>100</Length>
+        </Column>
+        <Column Name="OfficeHours">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>3000</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>5</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>1[89]|[2-5][0-9]|6[0-5]</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Working Age</GeneratorName>
+          <GeneratorDescription>21, 30, 47, 18, 55, 65, 25, 51, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>10</Length>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="users">
+      <Checked>true</Checked>
+      <Settings>
+        <RowsToGenerate>500</RowsToGenerate>
+        <Truncate>true</Truncate>
+      </Settings>
+      <Columns>
+        <Column Name="UserId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>500</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>16</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9999999</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="FullName">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>500</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>16</SeedValue>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>(($"FirstNamesMale.txt")|($"FirstNamesFemale.txt")) ($"LastNames.txt")</Expression>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Full Name</GeneratorName>
+          <GeneratorDescription>Malik Whitmore, Sherill Gaskin, Rigoberto Mundy, Joelle Childers, Vanna Doss, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="ContactInfo">
+          <Checked>true</Checked>
+          <DataType>TEXT</DataType>
+          <GeneratorOptions xsi:type="LoremIpsumGeneratorOptions">
+            <RowsCountToGenerate>500</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>17</SeedValue>
+            <MinLength>1</MinLength>
+            <MaxLength>100</MaxLength>
+            <MaxAllowedLength>0</MaxAllowedLength>
+            <MinWordsInSentence>3</MinWordsInSentence>
+            <MaxWordsInSentence>10</MaxWordsInSentence>
+            <MinSentences>1</MinSentences>
+            <MaxSentences>10</MaxSentences>
+            <MinParagraphs>1</MinParagraphs>
+            <MaxParagraphs>3</MaxParagraphs>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <PunctuationSigns>,.!?...;</PunctuationSigns>
+            <StartParagraphWithIndent>false</StartParagraphWithIndent>
+            <AddParagraphTags>false</AddParagraphTags>
+            <AddItalicTags>false</AddItalicTags>
+            <AddBoldTags>false</AddBoldTags>
+            <AddSingleLineBreakTags>false</AddSingleLineBreakTags>
+            <AddNewLines>false</AddNewLines>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlLoremIpsumGenerator</GeneratorType>
+          <GeneratorName>Lorem Ipsum</GeneratorName>
+          <GeneratorDescription>dummy text filler with some characteristics of a real written text</GeneratorDescription>
+        </Column>
+        <Column Name="UserName">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>500</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>16</SeedValue>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>((($"FirstNamesMale.txt")|($"FirstNamesFemale.txt")|($"LastNames.txt"))(\D{1,3}))|((($"FirstNamesMale.txt")|($"FirstNamesFemale.txt")|($"LastNames.txt"))((19[5-9]\d)|(20[0-2]\d)))</Expression>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>NickName</GeneratorName>
+          <GeneratorDescription>Jodi1982, Nancey777, Terrance28, Erich95, Cindi1, Salena92, Pasquale2015, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="Password">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>500</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>16</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>[0-9A-Z]+</Expression>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlStringRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Reg Exp</GeneratorName>
+          <GeneratorDescription>values based on a regular expression</GeneratorDescription>
+          <Length>500</Length>
+        </Column>
+        <Column Name="TypeId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>500</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>16</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>3</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>int</GeneratorName>
+          <GeneratorDescription>fill with 32-bit signed integer values</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="change_log">
+      <Checked>true</Checked>
+      <Settings>
+        <RowsToGenerate>3141</RowsToGenerate>
+        <Truncate>true</Truncate>
+      </Settings>
+      <Columns>
+        <Column Name="Change_LogId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>3141</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>1</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9999999</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="LogTime">
+          <Checked>true</Checked>
+          <DataType>TIMESTAMP</DataType>
+          <GeneratorOptions xsi:type="MySqlTimestampGeneratorOptions">
+            <RowsCountToGenerate>3141</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>4</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <DateTimeRange>MinMaxDate</DateTimeRange>
+            <OffsetFromColumnMinDays>0</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>7</OffsetFromColumnMaxDays>
+            <OffsetFromColumnMinTime />
+            <OffsetFromColumnMaxTime />
+            <MinDate>2015-12-01T00:00:00-08:00</MinDate>
+            <MaxDate>2016-02-22T00:00:00-08:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+            <IsRandomizeTime>true</IsRandomizeTime>
+            <MaxTime>863990000000</MaxTime>
+            <MinTime>10000000</MinTime>
+          </GeneratorOptions>
+          <GeneratorType>MySqlTimestampGenerator</GeneratorType>
+          <GeneratorName>timestamp</GeneratorName>
+          <GeneratorDescription>fill with values that contain both date and time parts</GeneratorDescription>
+        </Column>
+        <Column Name="UserId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>1</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="Message">
+          <Checked>true</Checked>
+          <DataType>TEXT</DataType>
+          <GeneratorOptions xsi:type="TwaddleGeneratorOptions">
+            <RowsCountToGenerate>3141</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>1</SeedValue>
+            <MinParagraphs>1</MinParagraphs>
+            <MaxParagraphs>10</MaxParagraphs>
+            <MinAvgLength>299</MinAvgLength>
+            <MaxAvgLength>9999</MaxAvgLength>
+            <FirstNameFileName>FirstNamesMale.txt</FirstNameFileName>
+            <FirstNameFileEncodingCodePage>0</FirstNameFileEncodingCodePage>
+            <LastNameFileEncodingCodePage>0</LastNameFileEncodingCodePage>
+            <LastNameFileName>LastNames.txt</LastNameFileName>
+            <IncludeHTMLTags>false</IncludeHTMLTags>
+            <IncludeHeading>false</IncludeHeading>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlTwaddleGenerator</GeneratorType>
+          <GeneratorName>User Comments</GeneratorName>
+          <GeneratorDescription>To put it simply, a lot of effort has been invested into the final phase.; The the patterns of the standards control gives less satisfactory results.; ...</GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="students">
+      <Checked>true</Checked>
+      <Settings>
+        <RowsToGenerate>337</RowsToGenerate>
+        <Truncate>true</Truncate>
+      </Settings>
+      <Columns>
+        <Column Name="StudentId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>337</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>15</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9999999</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="ProgramStatus">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>337</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>13</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>Active|InActive|Archived</Expression>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlStringRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Reg Exp</GeneratorName>
+          <GeneratorDescription>values based on a regular expression</GeneratorDescription>
+          <Length>12</Length>
+        </Column>
+        <Column Name="IntershipId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="Cohort">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>337</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>13</SeedValue>
+            <MinValue>20151</MinValue>
+            <MaxValue>20154</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>int</GeneratorName>
+          <GeneratorDescription>fill with 32-bit signed integer values</GeneratorDescription>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="UserId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>14</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="StreetAddressLineOne">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>337</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>13</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>(([1-9]\d{1,2})|([1-3]\d{3})) (((New|Old|Hidden|West|South|East|North|White|Red|E|(S)?W|NW|S(E)?|N(E)?) )?((((Ski|Chapel|Hunting|Fox|Rose|Riddle|Rock|Prospect|Sharp) Hill)|Front|Hope|Mount|Church|Social|Riverside|Highland|(Wood(land|bridge|hurst|side|row|fort|cock))|((Deep|Iron|Rush|Edge|Park|Hazel|Bur|Glen|Rock|Quail|Stone|Flint|Button|Beach|Ash|Brent)wood)|Lake|(Cedar|Pine) Tree|Oak|((Water|Meadow|Farm|River|Bay)view)|Town|Market|Mountain|Monument))|((1st|2nd|3rd|[4-9]\d?th))) (St(reet)?|Ave(nue)?|Dr(ive)?|R(oa)?d|Ct|C(our)?t|Ln|Lane|Blvd|Cir(cle)?|Hwy|Highway|Loop|Way|Pkwy|Parkway)</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>US Address Line 1</GeneratorName>
+          <GeneratorDescription>3581 South Ironwood Lane, 24 NW Lake Blvd, 1063 97th Street, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="StreetAddressLineTwo">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>337</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>14</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>((1st|2nd|3rd|[4-9]\d?th) (Floor|FL))|((Apartment|APT) \D\d{,2})|((Suite|STE) \D\d{,3})|(((Nipper|Diamond|Standard|Keith|Superior|Enquirer|Bartlett|Plaza|Equitable|MidAmerican|Penobscot|Guardian|Fisher|Buhl|First Security|257 Towers|Kearns|Judge) (Building|Bldg)))</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>US Address Line 2</GeneratorName>
+          <GeneratorDescription>Standard Building, Suite 14, 2nd Floor, APT 783, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="City">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="TextFileGeneratorOptions">
+            <RowsCountToGenerate>337</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>13</SeedValue>
+            <IsLoop>true</IsLoop>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <FileName>USCities.txt</FileName>
+            <TrimLeft>false</TrimLeft>
+            <TrimRight>false</TrimRight>
+            <CodePage>-1</CodePage>
+          </GeneratorOptions>
+          <GeneratorType>MySqlTextFileGenerator</GeneratorType>
+          <GeneratorName>US City</GeneratorName>
+          <GeneratorDescription>Washington, Las Vegas, Malibu, New York, Detroit, Los Angeles, Redmond, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+        <Column Name="State">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>337</RowsCountToGenerate>
+            <AllowNulls>true</AllowNulls>
+            <NullProportion>10</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>13</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>($"USStateCodes.csv[1]")</Expression>
+            <AllowEmptyStrings>true</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>US State</GeneratorName>
+          <GeneratorDescription>New York, Indiana, Ohio, Alaska, Texas, Virginia, Kansas, ...</GeneratorDescription>
+          <GeneratorCategory>Location</GeneratorCategory>
+          <Length>250</Length>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="user_notes">
+      <Checked>true</Checked>
+      <Settings>
+        <RowsToGenerate>1000</RowsToGenerate>
+        <Truncate>true</Truncate>
+      </Settings>
+      <Columns>
+        <Column Name="User_NoteId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>15</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9999999</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="UserId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>15</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="Note_Type">
+          <Checked>true</Checked>
+          <DataType>VARCHAR</DataType>
+          <GeneratorOptions xsi:type="MySqlRegularExpressionGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>15</SeedValue>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Expression>User|Intership|Company|Security</Expression>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlRegularExpressionGenerator</GeneratorType>
+          <GeneratorName>Phone Number Type</GeneratorName>
+          <GeneratorDescription>Cell, Fax, Home, Mobile, Preferred, Work, ...</GeneratorDescription>
+          <GeneratorCategory>Personal</GeneratorCategory>
+          <Length>100</Length>
+        </Column>
+        <Column Name="Note_Text">
+          <Checked>true</Checked>
+          <DataType>TEXT</DataType>
+          <GeneratorOptions xsi:type="TwaddleGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>15</SeedValue>
+            <MinParagraphs>1</MinParagraphs>
+            <MaxParagraphs>10</MaxParagraphs>
+            <MinAvgLength>299</MinAvgLength>
+            <MaxAvgLength>9999</MaxAvgLength>
+            <FirstNameFileName>FirstNamesMale.txt</FirstNameFileName>
+            <FirstNameFileEncodingCodePage>0</FirstNameFileEncodingCodePage>
+            <LastNameFileEncodingCodePage>0</LastNameFileEncodingCodePage>
+            <LastNameFileName>LastNames.txt</LastNameFileName>
+            <IncludeHTMLTags>false</IncludeHTMLTags>
+            <IncludeHeading>false</IncludeHeading>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlTwaddleGenerator</GeneratorType>
+          <GeneratorName>User Comments</GeneratorName>
+          <GeneratorDescription>To put it simply, a lot of effort has been invested into the final phase.; The the patterns of the standards control gives less satisfactory results.; ...</GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="student_contact_log">
+      <Checked>true</Checked>
+      <Settings>
+        <RowsToGenerate>1000</RowsToGenerate>
+        <Truncate>true</Truncate>
+      </Settings>
+      <Columns>
+        <Column Name="Student_Contact_LogId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="MySqlIntegerGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <Increment xsi:type="xsd:int">1</Increment>
+            <ValueDistributionMode>Sequential</ValueDistributionMode>
+            <SeedValue>9</SeedValue>
+            <MinValue>1</MinValue>
+            <MaxValue>9999999</MaxValue>
+            <UseDefault>false</UseDefault>
+            <DefaultValue />
+          </GeneratorOptions>
+          <GeneratorType>MySqlIntegerGenerator</GeneratorType>
+          <GeneratorName>ID (sequential)</GeneratorName>
+          <GeneratorDescription>1, 2, 3, 4, ..., 9, 10, 11, 12, ...</GeneratorDescription>
+          <GeneratorCategory>Business</GeneratorCategory>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="StudentId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>9</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="LogTime">
+          <Checked>true</Checked>
+          <DataType>TIMESTAMP</DataType>
+          <GeneratorOptions xsi:type="MySqlTimestampGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <UseDefault>false</UseDefault>
+            <ValueDistributionMode>Seed</ValueDistributionMode>
+            <SeedValue>9</SeedValue>
+            <SequentialValueTicks>864000000000</SequentialValueTicks>
+            <DateTimeRange>MinMaxDate</DateTimeRange>
+            <OffsetFromColumnMinDays>0</OffsetFromColumnMinDays>
+            <OffsetFromColumnMaxDays>7</OffsetFromColumnMaxDays>
+            <OffsetFromColumnMinTime />
+            <OffsetFromColumnMaxTime />
+            <MinDate>2016-01-01T00:00:00-08:00</MinDate>
+            <MaxDate>2016-02-22T00:00:00-08:00</MaxDate>
+            <IsRandomizeDate>true</IsRandomizeDate>
+            <IsRandomizeTime>true</IsRandomizeTime>
+            <MaxTime>863990000000</MaxTime>
+            <MinTime>10000000</MinTime>
+          </GeneratorOptions>
+          <GeneratorType>MySqlTimestampGenerator</GeneratorType>
+          <GeneratorName>timestamp</GeneratorName>
+          <GeneratorDescription>fill with values that contain both date and time parts</GeneratorDescription>
+        </Column>
+        <Column Name="Notes">
+          <Checked>true</Checked>
+          <DataType>TEXT</DataType>
+          <GeneratorOptions xsi:type="TwaddleGeneratorOptions">
+            <RowsCountToGenerate>1000</RowsCountToGenerate>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>9</SeedValue>
+            <MinParagraphs>1</MinParagraphs>
+            <MaxParagraphs>10</MaxParagraphs>
+            <MinAvgLength>299</MinAvgLength>
+            <MaxAvgLength>9999</MaxAvgLength>
+            <FirstNameFileName>FirstNamesMale.txt</FirstNameFileName>
+            <FirstNameFileEncodingCodePage>0</FirstNameFileEncodingCodePage>
+            <LastNameFileEncodingCodePage>0</LastNameFileEncodingCodePage>
+            <LastNameFileName>LastNames.txt</LastNameFileName>
+            <IncludeHTMLTags>false</IncludeHTMLTags>
+            <IncludeHeading>false</IncludeHeading>
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowEmptyStrings>false</AllowEmptyStrings>
+            <EmptyStringProportion>10</EmptyStringProportion>
+          </GeneratorOptions>
+          <GeneratorType>MySqlTwaddleGenerator</GeneratorType>
+          <GeneratorName>User Comments</GeneratorName>
+          <GeneratorDescription>To put it simply, a lot of effort has been invested into the final phase.; The the patterns of the standards control gives less satisfactory results.; ...</GeneratorDescription>
+          <GeneratorCategory>Product</GeneratorCategory>
+        </Column>
+        <Column Name="UserId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>10</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+      </Columns>
+    </Table>
+    <Table Name="student_interships">
+      <Checked>true</Checked>
+      <Settings>
+        <RowsToGenerate>300</RowsToGenerate>
+        <Truncate>true</Truncate>
+      </Settings>
+      <Columns>
+        <Column Name="IntershipId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>false</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>11</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+        <Column Name="StudentId">
+          <Checked>true</Checked>
+          <DataType>INT</DataType>
+          <GeneratorOptions xsi:type="ForeignKeyGeneratorOptions">
+            <Unique>true</Unique>
+            <IsAlwaysUnique>false</IsAlwaysUnique>
+            <AllowNulls>false</AllowNulls>
+            <NullProportion>0</NullProportion>
+            <ValueDistributionMode>Random</ValueDistributionMode>
+            <SeedValue>12</SeedValue>
+            <RepeatValues>false</RepeatValues>
+            <FromTimes>1</FromTimes>
+            <ToTimes>10</ToTimes>
+          </GeneratorOptions>
+          <GeneratorType>ForeignKeyGenerator</GeneratorType>
+          <GeneratorName>Foreign Key (auto assigned)</GeneratorName>
+          <GeneratorDescription>references a column from parent table</GeneratorDescription>
+          <HasForeignKey>true</HasForeignKey>
+          <Precision>11</Precision>
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <SynchronizationOptions xsi:type="DataSyncOptionGroup">
+    <SynchronizeType>File</SynchronizeType>
+    <SynchronizationFileName>E:\Users\Chris\Desktop\DataGeneration_20160222-1921.sql</SynchronizationFileName>
+    <BulkInsert>false</BulkInsert>
+  </SynchronizationOptions>
+</DataGenDocument>
