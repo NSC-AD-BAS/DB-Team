@@ -1,2 +1,4 @@
 # Queston: How do I get the Database Up and Running?
-Answer: Donwload and run "dbCreationScript.sql" in MySQL Workbench. If it runs without errors, your good.
+1) Donwload and run "1_Create_Database_Structure.sql" in MySQL Workbench. 
+1) Donwload and run "2_Create_Views_StoredProcedures.sql" in MySQL Workbench. 
+1) Donwload and run "InsertionData.sql" in MySQL Workbench. 
