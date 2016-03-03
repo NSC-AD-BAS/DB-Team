@@ -68,10 +68,13 @@ CREATE TABLE user_types
 CREATE TABLE users
 (
 	UserId					INT				PRIMARY KEY			AUTO_INCREMENT,
-    FullName				VARCHAR(250)	UNIQUE				NOT NULL,
+
+    FirstName				VARCHAR(250)	NOT NULL,
+    MiddleName				VARCHAR(250)	NULL,
+    LastName				VARCHAR(250)	NULL,
     ContactInfo				TEXT			NULL,
     UserName				VARCHAR(250)	NOT NULL			UNIQUE,
-    Password				VARCHAR(500)	NOT NULL,
+    UserPassword			VARCHAR(500)	NOT NULL,
     TypeId					INT				NOT NULL,
 	CONSTRAINT User_fk_TypeId
 		FOREIGN KEY (TypeId)
@@ -81,7 +84,7 @@ CREATE TABLE users
 
 CREATE TABLE students
 (
-	StudentId				INT 			PRIMARY KEY			AUTO_INCREMENT, 
+	StudentId				INT 			PRIMARY KEY, 
     ProgramStatus			VARCHAR(12)		NOT NULL,
 	InternshipId 			INT				NULL,
 	Cohort					INT				NOT NULL,
