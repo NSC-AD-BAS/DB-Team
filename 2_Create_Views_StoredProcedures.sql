@@ -9,6 +9,7 @@ CREATE OR REPLACE VIEW internship_list AS
         o.organizationId,
         i.PositionTitle AS `Position Title`,
         o.OrganizationName AS `Organization`,
+		i.SlotsAvailable AS `Slots Available`,
         i.DatePosted AS `Date Posted`,
         o.City,
         o.State,
