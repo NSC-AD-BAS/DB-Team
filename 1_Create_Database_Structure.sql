@@ -1,5 +1,5 @@
 /*
-This script will drop and re-create the database with valid dummy data.
+This script will drop and re-create the database with no dummy data in it. It does not create the views or stored procedures.
 */
 
 DROP DATABASE IF EXISTS prism;
