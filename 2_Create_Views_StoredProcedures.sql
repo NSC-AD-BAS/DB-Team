@@ -71,7 +71,9 @@ CREATE OR REPLACE VIEW org_detail AS
 
 CREATE OR REPLACE VIEW student_list AS
     (SELECT 
-        u.FullName AS `Student Name`,
+        u.FirstName AS `Student First Name`,
+        u.MiddleName AS `Student Middle Name`,
+		u.LastName AS `Student Last Name`,
         s.StudentId AS `SID`,
         s.Cohort,
         s.ProgramStatus AS `Program Status`,
@@ -88,7 +90,9 @@ CREATE OR REPLACE VIEW student_list AS
 
 CREATE OR REPLACE VIEW student_detail AS
     (SELECT 
-        u.FullName AS `Student Name`,
+		u.FirstName AS `Student First Name`,
+        u.MiddleName AS `Student Middle Name`,
+		u.LastName AS `Student Last Name`,
         s.StudentId AS `SID`,
         s.Cohort,
         s.ProgramStatus AS `Program Status`,
@@ -111,7 +115,9 @@ CREATE OR REPLACE VIEW student_detail AS
 CREATE OR REPLACE VIEW user_list AS
     (SELECT 
         u.UserId AS `User ID`,
-        u.FullName AS `User Name`,
+		u.FirstName AS `Student First Name`,
+        u.MiddleName AS `Student Middle Name`,
+		u.LastName AS `Student Last Name`,
         u.ContactInfo AS `Contact`,
         t.TypeName AS `User Type`,
         n.Note_Text AS `Notes`
@@ -134,7 +140,9 @@ CREATE OR REPLACE VIEW change_list AS
         c.Change_LogId,
         c.LogTime,
         c.UserId,
-        u.FullName AS `User Name`,
+       	u.FirstName AS `Student First Name`,
+        u.MiddleName AS `Student Middle Name`,
+		u.LastName AS `Student Last Name`,
         c.Message
     FROM
         change_log c
