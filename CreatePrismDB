@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SCHEMA=dbCreationScript.sql
-VIEWS=PRISM_views.sql
-DATA=InsertionData.sql
+SCHEMA=1_Create_Database_Structure.sql
+VIEWS=2_Create_Views_StoredProcedures.sql
+DATA=3_Insert_TestData.sql
 
 echo "Hola!  This script will import all the data into the prism DB on your local machine."
 echo "We're assuming you have root permissions to your local mysql instance, and that the instance is running on port 3306."
